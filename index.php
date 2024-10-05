@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" ">
-    <title>Sports Community Page - FIA</title>
+    <script src="gg.js" type="text/javascript"></script>
+    <title>Sports Community Page-FIA-SB</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -119,7 +120,7 @@
             margin-right: 8px;
         }
 
-        /* Responsive styles */
+        /* Responsive for different devices */
         @media (min-width: 769px) {
             .logo iframe {
                 width: 802px;
@@ -130,17 +131,17 @@
         @media (max-width: 768px) {
             .logo {
                 margin-bottom: 20px;
-                width: 100vw; /* Make logo full viewport width */
+                width: 100vw; /* Let logo take up full viewport width */
                 padding: 0; /* Remove default padding */
             }
 
             .logo iframe {
-                width: 100vw; /* Ensure iframe takes full viewport width */
+                width: 100vw; /* Ensure iframe fits viewport width */
                 height: 50vh; /* Set height to half of viewport height */
                 border: none;
                 position: relative;
                 top: 0;
-                padding: 0; /* Remove iframe internal padding */
+                padding: 0; /* Remove internal iframe padding */
                 margin: 0; /* Remove default margin */
             }
 
@@ -177,7 +178,7 @@
 
         <h1>Welcome to the Sports Community</h1>
 
-        <p>Join other sports enthusiasts and enjoy exciting content!</p>
+        <p>Join other sports fans and enjoy exciting content!</p>
 
         <a href="https://www.youtube.com/@wrc">
             <button class="cta-button">Join Now</button>
@@ -203,7 +204,7 @@
     </div>
 
     <div class="footer">
-        © 2024 SPOT Sports Community. All rights reserved.
+        © 2024 SBGROUP Sports Community. All rights reserved.
     </div>
 
 </body>
