@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content=" ">
-    <title>Halaman Komunitas Olahraga-FIA-SPOT</title>
+    <title>Sports Community Page - FIA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -45,7 +44,7 @@
         .logo {
             margin-bottom: 20px;
             width: 100%;
-            padding: 0; /* 去除默认 padding */
+            padding: 0; /* Remove default padding */
         }
 
         h1 {
@@ -120,7 +119,7 @@
             margin-right: 8px;
         }
 
-        /* 适应不同设备 */
+        /* Responsive styles */
         @media (min-width: 769px) {
             .logo iframe {
                 width: 802px;
@@ -131,18 +130,18 @@
         @media (max-width: 768px) {
             .logo {
                 margin-bottom: 20px;
-                width: 100vw; /* 让 logo 占满整个视口宽度 */
-                padding: 0; /* 去除默认 padding */
+                width: 100vw; /* Make logo full viewport width */
+                padding: 0; /* Remove default padding */
             }
 
             .logo iframe {
-                width: 100vw; /* 确保 iframe 视口宽度 */
-                height: 50vh; /* 高度设为视口高度的一半 */
+                width: 100vw; /* Ensure iframe takes full viewport width */
+                height: 50vh; /* Set height to half of viewport height */
                 border: none;
                 position: relative;
                 top: 0;
-                padding: 0; /* 去除 iframe 内部间距 */
-                margin: 0; /* 去除默认外边距 */
+                padding: 0; /* Remove iframe internal padding */
+                margin: 0; /* Remove default margin */
             }
 
             h1 {
@@ -176,12 +175,12 @@
             <iframe src="https://www.youtube.com/embed/7WZKniP5Puw?autoplay=1&mute=1" title="Final Day Highlights | WRC Rally Chile Bio Bío 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-        <h1>Selamat Datang di Komunitas Olahraga</h1>
+        <h1>Welcome to the Sports Community</h1>
 
-        <p>Bergabunglah dengan penggemar olahraga lainnya dan nikmati konten menarik!</p>
+        <p>Join other sports enthusiasts and enjoy exciting content!</p>
 
         <a href="https://www.youtube.com/@wrc">
-            <button class="cta-button">Gabung Sekarang</button>
+            <button class="cta-button">Join Now</button>
         </a>
 
         <div class="social-links">
@@ -204,7 +203,7 @@
     </div>
 
     <div class="footer">
-        © 2024 SPOT Komunitas Olahraga. Semua hak dilindungi.
+        © 2024 SPOT Sports Community. All rights reserved.
     </div>
 
 </body>
