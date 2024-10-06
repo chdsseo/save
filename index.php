@@ -3,209 +3,238 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" ">
-    <script src="gg.js" type="text/javascript"></script>
-    <title>Sports Community Page-FIA-SB</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Regal Techworks – Your Premium Tech Hub</title>
     <style>
         body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            font-family: 'Arial', sans-serif;
-            background-image: url('https://zaman.co.at/wp-content/uploads/2024/06/compressed_img-zReaALXJwCEqCIJmkL8SLokd.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            position: relative;
-            min-height: 100vh;
-            overflow: auto;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
         }
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.7);
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: calc(100vh - 60px);
-            text-align: center;
-            z-index: 1;
-            position: relative;
+        header {
+            background-color: #000; /* 深色背景 */
+            color: #fff;
             padding: 20px;
-        }
-
-        .logo {
-            margin-bottom: 20px;
-            width: 100%;
-            padding: 0; /* Remove default padding */
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #FFD700;
-        }
-
-        p {
-            font-size: 1.2em;
-            margin-bottom: 40px;
-            color: #ffffff;
-            max-width: 90%;
-            line-height: 1.5;
-        }
-
-        .cta-button {
-            background-color: #FF4500;
-            color: white;
-            font-size: 1.5em;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            width: 100%;
-            max-width: 300px;
-        }
-
-        .cta-button:hover {
-            background-color: #FF6347;
-        }
-
-        .footer {
-            position: relative;
-            bottom: 0;
-            width: 100%;
             text-align: center;
-            color: #bbbbbb;
-            font-size: 0.8em;
-            padding: 10px 0;
+            position: relative;
+            z-index: 2; /* 确保在最上层 */
         }
-
-        .social-links {
-            margin-top: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            width: 100%;
-        }
-
-        .social-button {
-            background-color: #333;
+        nav {
+            background-color: #444; /* 深灰色 */
             color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 5px;
-            cursor: pointer;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: white;
             text-decoration: none;
-            font-size: 1.5em;
-            transition: background-color 0.3s ease;
+            margin: 0 15px;
+            font-weight: bold;
         }
-
-        .social-button:hover {
-            background-color: #555;
+        nav a:hover {
+            text-decoration: underline; /* 悬停时下划线效果 */
         }
-
-        .social-button i {
-            margin-right: 8px;
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 1200px; /* 最大宽度 */
+            background-color: #f9f9f9; /* 亮色背景 */
+            border-radius: 8px; /* 圆角 */
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
         }
-
-        /* Responsive for different devices */
-        @media (min-width: 769px) {
-            .logo iframe {
-                width: 802px;
-                height: 451px;
-            }
+        footer {
+            background-color: #000; /* 深色背景 */
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            z-index: 2; /* 确保在最上层 */
         }
-
+        .footer-nav {
+            margin-top: 10px; /* 导航和版权信息之间的间距 */
+        }
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        .footer-nav a:hover {
+            text-decoration: underline; /* 悬停时下划线效果 */
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 响应式网格 */
+            gap: 20px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;
+            overflow: hidden; /* 确保内容不会溢出 */
+            transition: transform 0.3s; /* 添加动画 */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* 悬停时上移效果 */
+        }
+        .game-image {
+            width: 100%;
+            height: auto;
+        }
         @media (max-width: 768px) {
-            .logo {
-                margin-bottom: 20px;
-                width: 100vw; /* Let logo take up full viewport width */
-                padding: 0; /* Remove default padding */
-            }
-
-            .logo iframe {
-                width: 100vw; /* Ensure iframe fits viewport width */
-                height: 50vh; /* Set height to half of viewport height */
-                border: none;
-                position: relative;
-                top: 0;
-                padding: 0; /* Remove internal iframe padding */
-                margin: 0; /* Remove default margin */
-            }
-
-            h1 {
-                font-size: 2em;
-                margin-top: 20px;
-            }
-
-            p {
-                font-size: 1em;
-                padding-left: 10px;
-                padding-right: 10px;
-                margin-top: 20px;
-            }
-
-            .cta-button {
-                padding: 15px;
-                font-size: 1.2em;
-            }
-
-            .social-button {
-                font-size: 1.2em;
+            nav a {
+                display: block; /* 在小屏幕上堆叠导航链接 */
+                margin: 10px 0;
             }
         }
     </style>
 </head>
-<body> 
-    <div class="overlay"></div>
+<body>
 
-    <div class="container">
-        <div class="logo">
-            <iframe src="https://www.youtube.com/embed/7WZKniP5Puw?autoplay=1&mute=1" title="Final Day Highlights | WRC Rally Chile Bio Bío 2024" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <header>
+        <h1>Welcome to Regal Techworks</h1>
+        <p>Your Ultimate Tech & Entertainment Hub</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#games">Games</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
+        <a href="#testimonials">Testimonials</a>
+    </nav>
+
+    <section id="home">
+        <h2>Exclusive Tech Solutions</h2>
+        <p>At Regal Techworks, we provide <strong>premium experiences</strong> with cutting-edge technology, ensuring fast & secure access to all your favorite tools.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services We Offer</h2>
+        <p>Explore a variety of tech solutions and entertainment offerings. From daily cashback offers to exclusive rewards, we deliver a <strong>seamless entertainment</strong> experience.</p>
+        <ul>
+            <li>Exclusive Rewards Program</li>
+            <li>Variety of Premium Tech Products</li>
+            <li>Safe & Reliable Tech Solutions</li>
+            <li>Personalized Tech Support</li>
+            <li>Cloud Services</li>
+            <li>Mobile App Development</li>
+            <li>Website Design & Hosting</li>
+        </ul>
+    </section>
+
+    <section id="games">
+        <h2>Popular Games</h2>
+        <p>Explore our selection of exciting games! Enjoy top-notch entertainment with exclusive rewards and promotions!</p>
+        <div class="grid">
+            <div class="card">
+                <img src="1.jpg" alt="Game 1" class="game-image">
+                <h3>777Crown Game 1</h3>
+                <p>A thrilling adventure awaits! Join now and experience the excitement.</p>
+            </div>
+            <div class="card">
+                <img src="2.jpg" alt="Game 2" class="game-image">
+                <h3>777Crown Game 2</h3>
+                <p>Test your skills in this challenging game and win amazing prizes!</p>
+            </div>
+            <div class="card">
+                <img src="3.jpg" alt="Game 3" class="game-image">
+                <h3>777Crown Game 3</h3>
+                <p>Join your friends in this multiplayer experience and dominate the leaderboard!</p>
+            </div>
+            <div class="card">
+                <img src="4.jpg" alt="Game 4" class="game-image">
+                <h3>777Crown Game 4</h3>
+                <p>Engage in strategic gameplay and unlock exclusive rewards.</p>
+            </div>
+            <div class="card">
+                <img src="5.jpg" alt="Game 5" class="game-image">
+                <h3>777Crown Game 5</h3>
+                <p>Explore vast worlds and conquer challenges for epic rewards!</p>
+            </div>
+            <div class="card">
+                <img src="6.jpg" alt="Game 6" class="game-image">
+                <h3>777Crown Game 6</h3>
+                <p>Experience the thrill of victory in this fast-paced action game!</p>
+            </div>
+            <div class="card">
+                <img src="7.jpg" alt="Game 7" class="game-image">
+                <h3>777Crown Game 7</h3>
+                <p>Become the champion and earn your place in the hall of fame!</p>
+            </div>
+            <div class="card">
+                <img src="8.jpg" alt="Game 8" class="game-image">
+                <h3>777Crown Game 8</h3>
+                <p>Delve into the mystery and solve the puzzles to win big!</p>
+            </div>
+            <div class="card">
+                <img src="9.jpg" alt="Game 9" class="game-image">
+                <h3>777Crown Game 9</h3>
+                <p>Challenge your friends and see who reigns supreme!</p>
+            </div>
         </div>
+    </section>
 
-        <h1>Welcome to the Sports Community</h1>
+    <section id="blog">
+        <h2>Latest Tech News</h2>
+        <article>
+            <h3>Tech Trends in 2024</h3>
+            <p>Stay updated with the latest trends in technology and innovation.</p>
+        </article>
+        <article>
+            <h3>How to Choose the Right Gadget</h3>
+            <p>Tips and tricks to help you find the perfect tech products for your needs.</p>
+        </article>
+    </section>
 
-        <p>Join other sports fans and enjoy exciting content!</p>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Regal Techworks is dedicated to providing top-notch tech solutions and entertainment options for everyone. Our team is passionate about innovation and customer satisfaction.</p>
+    </section>
 
-        <a href="https://www.youtube.com/@wrc">
-            <button class="cta-button">Join Now</button>
-        </a>
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <p>Join our membership program for exclusive benefits, daily offers, and exciting activities. Contact us now to discover more!</p>
+        <p>Email: <a href="mailto:contact@sbgoods.shop" style="color: #007BFF;">contact@sbgoods.shop</a></p>
+    </section>
 
-        <div class="social-links">
-            <a href="https://rally.tv" class="social-button">
-                <i class="fas fa-video"></i>
-            </a>
-            <a href="https://facebook.com/wrc" class="social-button">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://twitter.com/OfficialWRC" class="social-button">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="https://instagram.com/officialwrc" class="social-button">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://tiktok.com/@wrc" class="social-button">
-                <i class="fab fa-tiktok"></i>
-            </a>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>What services do you offer?</li>
+            <li>How can I join the membership program?</li>
+            <li>What are your payment options?</li>
+            <li>How do I contact customer support?</li>
+        </ul>
+    </section>
+
+    <section id="testimonials">
+        <h2>What Our Customers Say</h2>
+        <blockquote>"Regal Techworks has transformed my tech experience!" - John D.</blockquote>
+        <blockquote>"The best tech support I've ever received." - Sarah P.</blockquote>
+    </section>
+
+    <footer>
+        <p>© 2024 Regal Techworks. All rights reserved.</p>
+        <div class="footer-nav">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#products">Products</a>
+            <a href="#games">Games</a>
+            <a href="#blog">Blog</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact</a>
+            <a href="#faq">FAQ</a>
+            <a href="#testimonials">Testimonials</a>
         </div>
-    </div>
-
-    <div class="footer">
-        © 2024 SBGROUP Sports Community. All rights reserved.
-    </div>
+    </footer>
 
 </body>
 </html>
